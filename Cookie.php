@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['logout'])) {
     setcookie("user", "", time() - 3600);
-    header("Location: Form.php");
+    header("Location: Cookie.php");
     exit();
 }
 
