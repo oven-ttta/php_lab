@@ -1,10 +1,5 @@
 <?php
 session_start();
-
-// Method 1: Destroy specific session variable
-// unset($_SESSION['views']);
-
-// Method 2: Destroy entire session
 session_destroy();
 
 ?>

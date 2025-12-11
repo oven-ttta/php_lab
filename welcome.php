@@ -7,7 +7,6 @@ $language = $_POST['language'];
 $gender = $_REQUEST['gender'];
 $interest = $_POST['interest'];
 
-// Store login data in session
 $_SESSION['login'] = $login;
 $_SESSION['password'] = $password;
 $_SESSION['language'] = $language;
