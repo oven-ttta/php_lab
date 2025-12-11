@@ -30,7 +30,7 @@
         comments:<br>
         <textarea name="comments" rows="5" cols="30"></textarea><br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit">
     </form>
 </body>
 </html>
