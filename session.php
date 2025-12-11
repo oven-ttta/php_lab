@@ -7,6 +7,11 @@ else
     $_SESSION['views'] = 1;
 
 echo "Views = " . $_SESSION['views'];
+
+if(isset($_GET['reset']) && $_GET['reset'] == 'views') {
+    unset($_SESSION['views']);
+    header("Location: Session.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,19 +27,6 @@ echo "Views = " . $_SESSION['views'];
     <br>
     <a href="Session.php">Refresh Page</a> | 
     <a href="Form.php">Back to Form</a> |
-    <a href="?reset=views">Reset Views</a> |
-    <a href="?destroy=session">Destroy Session</a>
+    <a href="?reset=views">Reset Views</a>
 </body>
 </html>
-
-<?php
-if(isset($_GET['reset']) && $_GET['reset'] == 'views') {
-    unset($_SESSION['views']);
-    header("Location: Session.php");
-}
-
-if(isset($_GET['destroy']) && $_GET['destroy'] == 'session') {
-    session_destroy();
-    header("Location: Session.php");
-}
-?>
