@@ -7,6 +7,13 @@ $_SESSION['language'] = $_POST['language'] ?? '';
 $_SESSION['gender'] = $_POST['gender'] ?? '';
 $_SESSION['interest'] = $_POST['interest'] ?? [];
 $_SESSION['comments'] = $_POST['comments'] ?? '';
+
+echo "<b>Login:</b> " . $_SESSION['login'] . "<br>";
+echo "<b>Password:</b> " . $_SESSION['password'] . "<br>";
+echo "<b>Language:</b> " . $_SESSION['language'] . "<br>";
+echo "<b>Gender:</b> " . $_SESSION['gender'] . "<br>";
+echo "<b>Interest:</b> " . implode(",", $_SESSION['interest']) . "<br>";
+echo "<b>Comments:</b> " . $_SESSION['comments'] . "<br>";
 ?>
 
 <!DOCTYPE html>
@@ -15,16 +22,7 @@ $_SESSION['comments'] = $_POST['comments'] ?? '';
     <title>Welcome</title>
 </head>
 <body>
-    <h2>Welcome</h2>
-    
-    <p><b>Login:</b> <?php echo $_SESSION['login']; ?></p>
-    <p><b>Password:</b> <?php echo $_SESSION['password']; ?></p>
-    <p><b>Language:</b> <?php echo $_SESSION['language']; ?></p>
-    <p><b>Gender:</b> <?php echo $_SESSION['gender']; ?></p>
-    <p><b>Interest:</b> <?php echo implode(", ", (array)$_SESSION['interest']); ?></p>
-    <p><b>Comments:</b> <?php echo $_SESSION['comments']; ?></p>
-    
-    <a href="Form.php">Back to Form</a>
-    <a href="Session.php">Go to Session</a>
+    <a href="Form.php">กลับไปที่ Form</a>
+    <a href="Session.php">ไปที่ Session</a>
 </body>
 </html>

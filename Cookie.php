@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
     <?php if (isset($_COOKIE['user'])): ?>
         <p>Welcome, <?= $_COOKIE['user'] ?></p>
         <button onclick="location.href='?logout=true'">Logout</button>
-        <a href="Form.php">Back to Form</a>
+        <a href="Form.php">กลับไปที่ Form</a>
     <?php else: ?>
         <form method="POST">
             <label>Username: <input type="text" name="username" required></label>
@@ -30,6 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
         </form>
     <?php endif; ?>
     
-    <a href="Form.php">Back to Form</a>
+    <a href="Form.php">กลับไปที่ Form</a>
 </body>
 </html>
