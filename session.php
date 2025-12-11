@@ -12,6 +12,7 @@ if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     header("Location: Session.php");
     exit;
 }
+    echo $_SESSION['views']."<br>";
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +21,6 @@ if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     <title>Session Demo</title>
 </head>
 <body>
-    <p>You have viewed this page <?php echo $_SESSION['views']; ?> times.</p>
-    
-    <br>
-    
     <a href="Session.php">Refresh Page</a> | 
     <a href="Form.php">Back to Form</a> | 
     <a href="Cookie.php">Go to Cookie</a> | 
