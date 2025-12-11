@@ -22,8 +22,7 @@
         <br><br>
 
         Interest:<br>
-        <input type="checkbox" name="interest[]" value="Movies"> Movies<br>
-        <input type="checkbox" name="interest[]" value="TV/Music"> TV/Music<br>
+        <input type="checkbox" name="interest[]" value="Movies/TV/Music"> Movies/TV/Music<br>
         <input type="checkbox" name="interest[]" value="Sports"> Sports<br>
         <input type="checkbox" name="interest[]" value="Travel"> Travel<br><br>
 

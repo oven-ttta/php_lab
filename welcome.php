@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-$_SESSION['login'] = $_POST['login'] ?? '';
-$_SESSION['language'] = $_POST['language'] ?? '';
-$_SESSION['gender'] = $_POST['gender'] ?? '';
-$_SESSION['interest'] = $_POST['interest'] ?? [];
-$_SESSION['comments'] = $_POST['comments'] ?? '';
+$_SESSION['login'] = $_REQUEST['login'] ?? '';
+$_SESSION['language'] = $_REQUEST['language'] ?? '';
+$_SESSION['gender'] = $_REQUEST['gender'] ?? '';
+$_SESSION['interest'] = $_REQUEST['interest'] ?? [];
+$_SESSION['comments'] = $_REQUEST['comments'] ?? '';
 
 echo "<b>Login:</b> " . $_SESSION['login'] . "<br>";
 echo "<b>Language:</b> " . $_SESSION['language'] . "<br>";
