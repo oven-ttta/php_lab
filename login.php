@@ -1,0 +1,10 @@
+<?php session_start(); ?>
+<html>
+<body>
+    <h2>Login</h2>
+    <form action="welcome.php" method="post">
+        Username: <input type="text" name="username"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
