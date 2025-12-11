@@ -2,14 +2,12 @@
 session_start();
 
 $_SESSION['login'] = $_POST['login'] ?? '';
-$_SESSION['password'] = $_POST['password'] ?? '';
 $_SESSION['language'] = $_POST['language'] ?? '';
 $_SESSION['gender'] = $_POST['gender'] ?? '';
 $_SESSION['interest'] = $_POST['interest'] ?? [];
 $_SESSION['comments'] = $_POST['comments'] ?? '';
 
 echo "<b>Login:</b> " . $_SESSION['login'] . "<br>";
-echo "<b>Password:</b> " . $_SESSION['password'] . "<br>";
 echo "<b>Language:</b> " . $_SESSION['language'] . "<br>";
 echo "<b>Gender:</b> " . $_SESSION['gender'] . "<br>";
 echo "<b>Interest:</b> " . implode(",", $_SESSION['interest']) . "<br>";
