@@ -17,12 +17,12 @@ $_SESSION['comments'] = $_POST['comments'] ?? '';
 <body>
     <h2>Welcome</h2>
     <?php
-        $login = htmlspecialchars($_SESSION['login']);
-        $password = htmlspecialchars($_SESSION['password']);
-        $language = htmlspecialchars($_SESSION['language']);
-        $gender = htmlspecialchars($_SESSION['gender']);
-        $interest = htmlspecialchars(implode(", ", (array)$_SESSION['interest']));
-        $comment = htmlspecialchars($_SESSION['comments']);
+        $login = $_SESSION['login'];
+        $password = $_SESSION['password'];
+        $language = $_SESSION['language'];
+        $gender = $_SESSION['gender'];
+        $interest = implode(", ", (array)$_SESSION['interest']);
+        $comment = $_SESSION['comments'];
     ?>
     
     <p><strong>Login:</strong> <?php echo $login; ?></p>
