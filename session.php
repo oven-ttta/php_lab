@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+    if (isset($_SESSION['username'])) {
+        $displayName = $_SESSION['username'];
+    } else {
+        $displayName = "Guest";
+    }
 ?>  
 <!DOCTYPE html>
 <html>
