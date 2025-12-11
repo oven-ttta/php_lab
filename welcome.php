@@ -16,21 +16,13 @@ $_SESSION['comments'] = $_POST['comments'] ?? '';
 </head>
 <body>
     <h2>Welcome</h2>
-    <?php
-        $login = $_SESSION['login'];
-        $password = $_SESSION['password'];
-        $language = $_SESSION['language'];
-        $gender = $_SESSION['gender'];
-        $interest = implode(", ", (array)$_SESSION['interest']);
-        $comment = $_SESSION['comments'];
-    ?>
     
-    <p><strong>Login:</strong> <?php echo $login; ?></p>
-    <p><strong>Password:</strong> <?php echo $password; ?></p>
-    <p><strong>Language:</strong> <?php echo $language; ?></p>
-    <p><strong>Gender:</strong> <?php echo $gender; ?></p>
-    <p><strong>Interest:</strong> <?php echo $interest; ?></p>
-    <p><strong>Comments:</strong> <?php echo $comment?></p>
+    <p><strong>Login:</strong> <?php echo $_SESSION['login']; ?></p>
+    <p><strong>Password:</strong> <?php echo $_SESSION['password']; ?></p>
+    <p><strong>Language:</strong> <?php echo $_SESSION['language']; ?></p>
+    <p><strong>Gender:</strong> <?php echo $_SESSION['gender']; ?></p>
+    <p><strong>Interest:</strong> <?php echo implode(", ", (array)$_SESSION['interest']); ?></p>
+    <p><strong>Comments:</strong> <?php echo $_SESSION['comments']; ?></p>
     
     <a href="Form.php">Back to Form</a>
 </body>
