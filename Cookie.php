@@ -4,7 +4,11 @@ $expire = time() + (60*60*24*30); // 30 days
 setcookie("user", "Alex Porter", $expire);
 ?>
 
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Cookie Demo</title>
+</head>
 <body>
     <h2>Cookie Demo</h2>
     

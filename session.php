@@ -9,7 +9,11 @@ else
 echo "Views = " . $_SESSION['views'];
 ?>
 
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Session Demo</title>
+</head>
 <body>
     <h2>Session Demo</h2>
     <p>

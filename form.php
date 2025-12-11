@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Register Form</title>
+</head>
 <body>
     <h2>Register Form</h2>
-    <form action="welcome.php" method="post">
+    <form action="Welcome.php" method="post">
         Login: <input type="text" name="login"><br><br>
         Password: <input type="password" name="password"><br><br>
 
