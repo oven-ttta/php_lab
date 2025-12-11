@@ -27,6 +27,9 @@
         <input type="checkbox" name="interest[]" value="Sports"> Sports<br>
         <input type="checkbox" name="interest[]" value="Travel"> Travel<br><br>
 
+        comments:<br>
+        <textarea name="comments" rows="5" cols="30"></textarea><br><br>
+
         <input type="submit" value="Submit">
     </form>
 </body>

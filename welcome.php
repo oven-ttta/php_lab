@@ -2,10 +2,11 @@
 session_start();
 
 $_SESSION['login'] = $_POST['login'] ?? '';
-$_SESSION['password'] = $_REQUEST['password'] ?? '';
+$_SESSION['password'] = $_POST['password'] ?? '';
 $_SESSION['language'] = $_POST['language'] ?? '';
-$_SESSION['gender'] = $_REQUEST['gender'] ?? '';
+$_SESSION['gender'] = $_POST['gender'] ?? '';
 $_SESSION['interest'] = $_POST['interest'] ?? [];
+$_SESSION['comments'] = $_POST['comments'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,7 @@ $_SESSION['interest'] = $_POST['interest'] ?? [];
         $language = htmlspecialchars($_SESSION['language']);
         $gender = htmlspecialchars($_SESSION['gender']);
         $interest = htmlspecialchars(implode(", ", (array)$_SESSION['interest']));
+        $comment = htmlspecialchars($_SESSION['comments']);
     ?>
     
     <p><strong>Login:</strong> <?php echo $login; ?></p>
@@ -28,6 +30,7 @@ $_SESSION['interest'] = $_POST['interest'] ?? [];
     <p><strong>Language:</strong> <?php echo $language; ?></p>
     <p><strong>Gender:</strong> <?php echo $gender; ?></p>
     <p><strong>Interest:</strong> <?php echo $interest; ?></p>
+    <p><strong>Comments:</strong> <?php echo $comment?></p>
     
     <a href="Form.php">Back to Form</a>
 </body>
