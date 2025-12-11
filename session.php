@@ -26,6 +26,7 @@ if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     
     <a href="Session.php">Refresh Page</a> | 
     <a href="Form.php">Back to Form</a> | 
+    <a href="Cookie.php">Go to Cookie</a> | 
     <a href="?reset=views">Reset Views</a>
 </body>
 </html>

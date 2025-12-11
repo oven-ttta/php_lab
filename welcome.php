@@ -25,5 +25,6 @@ $_SESSION['comments'] = $_POST['comments'] ?? '';
     <p><b>Comments:</b> <?php echo $_SESSION['comments']; ?></p>
     
     <a href="Form.php">Back to Form</a>
+    <a href="Session.php">Go to Session</a>
 </body>
 </html>
