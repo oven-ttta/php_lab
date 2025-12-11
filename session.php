@@ -16,7 +16,7 @@ echo "Views = " . $_SESSION['views'];
         <?php echo "You have viewed this page " . $_SESSION['views'] . " times."; ?>
     </p>
     <br>
-    <a href="session.php">Refresh Page</a> | 
-    <a href="session_destroy.php">Destroy Session</a>
+    <a href="Session.php">Refresh Page</a> | 
+    <a href="Form.php">Back to Form</a>
 </body>
 </html>
