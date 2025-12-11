@@ -1,21 +1,31 @@
 <?php
 session_start();
 
-if (isset($_POST['username'])) {
-    $_SESSION['username'] = $_POST['username'];
-}
+$login = $_POST['login'];
+$password = $_REQUEST['password']; 
+$language = $_POST['language'];
+$gender = $_REQUEST['gender'];
+$interest = $_POST['interest'];
 
-if (!isset($_SESSION['username'])) {
-    echo "Session expired. Please login again.";
-    exit;
-}
+// Store login data in session
+$_SESSION['login'] = $login;
+$_SESSION['password'] = $password;
+$_SESSION['language'] = $language;
+$_SESSION['gender'] = $gender;
+$_SESSION['interest'] = $interest;
 ?>
 
 <html>
+
 <body>
     <h2>Welcome</h2>
     <?php
-        echo "Hello, " . $_SESSION['username'];
+        echo "Hello, " . $_SESSION['login'] . "<br>";
+        echo "Password: " . $_SESSION['password'] . "<br>";
+        echo "Language: " . $_SESSION['language'] . "<br>";
+        echo "Gender: " . $_SESSION['gender'] . "<br>";
+        echo "Interest: " . implode(", ", $_SESSION['interest']) . "<br>";
     ?>
 </body>
+
 </html>

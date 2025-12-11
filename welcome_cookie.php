@@ -11,6 +11,7 @@ if (!isset($_COOKIE['user'])) {
     <?php 
         echo "Hello, " . $_COOKIE['user']; 
     ?>
+    <p>Your username is stored in a cookie and will remain even after closing the browser.</p>
 
     <br><br>
     <a href="logout.php">Logout</a>

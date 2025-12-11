@@ -1,7 +1,7 @@
 <html>
 <body>
     <h2>Register Form</h2>
-    <form action="result.php" method="post">
+    <form action="welcome.php" method="post">
         Login: <input type="text" name="login"><br><br>
         Password: <input type="password" name="password"><br><br>
 
