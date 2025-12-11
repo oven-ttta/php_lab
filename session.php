@@ -9,7 +9,7 @@ if(isset($_SESSION['views'])) {
 
 if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     unset($_SESSION['views']);
-    header("Location: session.php");
+    header("Location: Session.php");
     exit;
 }
 ?>
@@ -24,7 +24,7 @@ if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     
     <br>
     
-    <a href="session.php">Refresh Page</a> | 
+    <a href="Session.php">Refresh Page</a> | 
     <a href="Form.php">Back to Form</a> | 
     <a href="?reset=views">Reset Views</a>
 </body>
