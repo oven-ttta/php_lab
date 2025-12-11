@@ -18,14 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
 </head>
 <body>
     <h2>Cookie Demo</h2>
+    
     <?php if (isset($_COOKIE['user'])): ?>
-        <p>Welcome, <?= htmlspecialchars($_COOKIE['user']) ?></p>
+        <p>Welcome, <?= $_COOKIE['user'] ?></p>
         <button onclick="location.href='?logout=true'">Logout</button>
+        <a href="Form.php">Back to Form</a>
     <?php else: ?>
         <form method="POST">
             <label>Username: <input type="text" name="username" required></label>
             <button type="submit">Login</button>
         </form>
     <?php endif; ?>
+    
+    <a href="Form.php">Back to Form</a>
 </body>
 </html>
