@@ -17,12 +17,12 @@ $_SESSION['comments'] = $_POST['comments'] ?? '';
 <body>
     <h2>Welcome</h2>
     
-    <p><strong>Login:</strong> <?php echo $_SESSION['login']; ?></p>
-    <p><strong>Password:</strong> <?php echo $_SESSION['password']; ?></p>
-    <p><strong>Language:</strong> <?php echo $_SESSION['language']; ?></p>
-    <p><strong>Gender:</strong> <?php echo $_SESSION['gender']; ?></p>
-    <p><strong>Interest:</strong> <?php echo implode(", ", (array)$_SESSION['interest']); ?></p>
-    <p><strong>Comments:</strong> <?php echo $_SESSION['comments']; ?></p>
+    <p><b>Login:</b> <?php echo $_SESSION['login']; ?></p>
+    <p><b>Password:</b> <?php echo $_SESSION['password']; ?></p>
+    <p><b>Language:</b> <?php echo $_SESSION['language']; ?></p>
+    <p><b>Gender:</b> <?php echo $_SESSION['gender']; ?></p>
+    <p><b>Interest:</b> <?php echo implode(", ", (array)$_SESSION['interest']); ?></p>
+    <p><b>Comments:</b> <?php echo $_SESSION['comments']; ?></p>
     
     <a href="Form.php">Back to Form</a>
 </body>
