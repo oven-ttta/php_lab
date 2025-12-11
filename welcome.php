@@ -1,17 +1,11 @@
 <?php
 session_start();
 
-$login = $_POST['login'];
-$password = $_REQUEST['password'];
-$language = $_POST['language'];
-$gender = $_REQUEST['gender'];
-$interest = $_POST['interest'];
-
-$_SESSION['login'] = $login;
-$_SESSION['password'] = $password;
-$_SESSION['language'] = $language;
-$_SESSION['gender'] = $gender;
-$_SESSION['interest'] = $interest;
+$_SESSION['login'] = $_POST['login'] ?? '';
+$_SESSION['password'] = $_REQUEST['password'] ?? '';
+$_SESSION['language'] = $_POST['language'] ?? '';
+$_SESSION['gender'] = $_REQUEST['gender'] ?? '';
+$_SESSION['interest'] = $_POST['interest'] ?? [];
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +16,19 @@ $_SESSION['interest'] = $interest;
 <body>
     <h2>Welcome</h2>
     <?php
-        echo "Hello, " . $_SESSION['login'] . "<br>";
-        echo "Password: " . $_SESSION['password'] . "<br>";
-        echo "Language: " . $_SESSION['language'] . "<br>";
-        echo "Gender: " . $_SESSION['gender'] . "<br>";
-        echo "Interest: " . implode(", ", $_SESSION['interest']) . "<br>";
+        $login = htmlspecialchars($_SESSION['login']);
+        $password = htmlspecialchars($_SESSION['password']);
+        $language = htmlspecialchars($_SESSION['language']);
+        $gender = htmlspecialchars($_SESSION['gender']);
+        $interest = htmlspecialchars(implode(", ", (array)$_SESSION['interest']));
     ?>
     
-    <br><br>
+    <p><strong>Login:</strong> <?php echo $login; ?></p>
+    <p><strong>Password:</strong> <?php echo $password; ?></p>
+    <p><strong>Language:</strong> <?php echo $language; ?></p>
+    <p><strong>Gender:</strong> <?php echo $gender; ?></p>
+    <p><strong>Interest:</strong> <?php echo $interest; ?></p>
+    
     <a href="Form.php">Back to Form</a>
 </body>
 </html>

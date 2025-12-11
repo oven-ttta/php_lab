@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-if(isset($_SESSION['views']))
-    $_SESSION['views'] = $_SESSION['views'] + 1;
-else 
+if(isset($_SESSION['views'])) {
+    $_SESSION['views']++;
+} else {
     $_SESSION['views'] = 1;
+}
 
-echo "Views = " . $_SESSION['views'];
-
-if(isset($_GET['reset']) && $_GET['reset'] == 'views') {
+if(isset($_GET['reset']) && $_GET['reset'] === 'views') {
     unset($_SESSION['views']);
-    header("Location: Session.php");
+    header("Location: session.php");
+    exit;
 }
 ?>
 
@@ -20,13 +20,12 @@ if(isset($_GET['reset']) && $_GET['reset'] == 'views') {
     <title>Session Demo</title>
 </head>
 <body>
-    <h2>Session Demo</h2>
-    <p>
-        <?php echo "You have viewed this page " . $_SESSION['views'] . " times."; ?>
-    </p>
+    <p>You have viewed this page <?php echo $_SESSION['views']; ?> times.</p>
+    
     <br>
-    <a href="Session.php">Refresh Page</a> | 
-    <a href="Form.php">Back to Form</a> |
+    
+    <a href="session.php">Refresh Page</a> | 
+    <a href="Form.php">Back to Form</a> | 
     <a href="?reset=views">Reset Views</a>
 </body>
 </html>
